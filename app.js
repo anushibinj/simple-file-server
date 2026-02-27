@@ -7,7 +7,7 @@ import fs from "fs";
 /**
  * Server Configuration from Environment Variables
  */
-const UPLOAD_DIR = process.env.UPLOAD_DIR || "/srv/public-files";
+const UPLOAD_DIR = process.env.UPLOAD_DIR || "./public-files";
 
 // Ensure upload directory exists to prevent runtime errors
 if (!fs.existsSync(UPLOAD_DIR)) {
