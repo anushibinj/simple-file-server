@@ -2,8 +2,19 @@
 	"name": "simple-file-server",
 	"version": "1.0.0",
 	"type": "module",
+	"scripts": {
+		"start": "node index.js",
+		"test": "vitest",
+		"test:run": "vitest run",
+		"test:coverage": "vitest run --coverage"
+	},
 	"dependencies": {
 		"express": "^5.2.1",
 		"multer": "^2.0.2"
+	},
+	"devDependencies": {
+		"@vitest/coverage-v8": "^4.0.18",
+		"supertest": "^7.2.2",
+		"vitest": "^4.0.18"
 	}
 }
