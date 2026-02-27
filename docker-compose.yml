@@ -1,0 +1,16 @@
+services:
+  server:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - SERVER_PORT=3000
+      - UPLOAD_DIR=/srv/public-files
+      - SERVER_BASE_URL=http://localhost:3000
+    volumes:
+      - public-files:/srv/public-files
+    restart: unless-stopped
+
+volumes:
+  public-files:
+    driver: local
